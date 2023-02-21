@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TimerAndScore : MonoBehaviour
 {
     public float timeLeft = 60.0f;
-    public Text timerText;
-    public int score = 0;
-    public Text scoreText;
+    public TextMeshProUGUI timerText;
+    /*public int score = 0;
+    public TextMeshProUGUI scoreText;*/
     private bool timeUp = false;
 
     void Update()
@@ -21,9 +22,6 @@ public class TimerAndScore : MonoBehaviour
         }
         if (!timeUp)
         {
-            //Reset time
-            Time.timeScale = 1;
-            
             if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
@@ -34,10 +32,10 @@ public class TimerAndScore : MonoBehaviour
                     if (hit.transform.CompareTag("Enemy"))
                     {
                         Destroy(hit.transform.gameObject);
-                        score++;
+/*                        score++;
                         scoreText.text = score + " frogs was ate.";
 
-                        Debug.Log("You ate: " + score + "Frogs");
+                        Debug.Log("You ate: " + score + "Frogs");*/
                     }
                 }
             }
