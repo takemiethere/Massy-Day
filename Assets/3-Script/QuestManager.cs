@@ -8,6 +8,10 @@ public class QuestManager : MonoBehaviour
     public int numItemsToSteal;
     public int numItemsStolen;
     public TextMeshProUGUI itemsStolenText;
+
+    public float theftTimeLimit = 5f;
+
+
     // Start is called before the first frame update
     void Start()
     {

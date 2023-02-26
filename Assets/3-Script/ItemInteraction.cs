@@ -9,7 +9,7 @@ public class ItemInteraction : MonoBehaviour
     Quaternion Rot;
     int layerMask = 1 << 8;
 
-    public FirstPersonController move, rotate;
+    public FirstPersonMovement move, rotate;
     //public playerRotate rotate;
     public Transform InspectZone;
 
