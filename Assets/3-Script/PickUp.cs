@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     public QuestManager questManager;
     public float stealTime = 5f;
     public float maxStealDistance = 2f;
+    //public string itemName;
     private float timeLeft = 0f;
     private bool isStealing = false;
     // Start is called before the first frame update
@@ -56,6 +57,7 @@ public class PickUp : MonoBehaviour
         if (isStealing)
         {
             GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height / 2 - 25, 100, 50), "Stealing: " + Mathf.RoundToInt(timeLeft));
+            //GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height / 2 - 25, 100, 50), "Stealing " + itemName + ": " + Mathf.RoundToInt(timeLeft));
         }
     }
 }

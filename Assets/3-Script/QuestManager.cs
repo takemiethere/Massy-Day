@@ -92,7 +92,7 @@ public class QuestManager : MonoBehaviour
     {
         if (numItemsStolen >= numItemsToSteal)
         {
-            // TODO: player has won the game, add win condition here
+            Debug.Log("Player Win");
         }
     }
 
@@ -105,7 +105,7 @@ public class QuestManager : MonoBehaviour
         {
             int itemIndex = GetRandomItem();
             GameObject itemToSteal = itemsToSteal[itemIndex];
-            Instantiate(itemToSteal, new Vector3(Random.Range(-5f, 5f), 0.5f, Random.Range(-5f, 5f)), Quaternion.identity);
+            //Instantiate(itemToSteal, new Vector3(Random.Range(-5f, 5f), 0.5f, Random.Range(-5f, 5f)), Quaternion.identity);
         }
     }
 }
