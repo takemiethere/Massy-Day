@@ -48,6 +48,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
@@ -79,7 +80,7 @@ public class QuestManager : MonoBehaviour
         itemsStolenText.text = "Items Stolen: " + numItemsStolen + " / " + numItemsToSteal;
     }
 
-    int GetRandomItem()
+    int GetItem()
     {
         int randomIndex = Random.Range(0, itemsRemaining.Count);
         int itemIndex = itemsRemaining[randomIndex];
@@ -103,9 +104,14 @@ public class QuestManager : MonoBehaviour
 
         if (numItemsStolen < numItemsToSteal)
         {
-            int itemIndex = GetRandomItem();
+            int itemIndex = GetItem();
             GameObject itemToSteal = itemsToSteal[itemIndex];
             //Instantiate(itemToSteal, new Vector3(Random.Range(-5f, 5f), 0.5f, Random.Range(-5f, 5f)), Quaternion.identity);
+           /* ItemRandomizer itemRandomizer = FindObjectOfType<ItemRandomizer>();
+            itemRandomizer.RemoveItem(itemToSteal.name);*/
+
         }
+        //GetComponent<ItemRandomizer>().RemoveCurrentItem();
+
     }
 }

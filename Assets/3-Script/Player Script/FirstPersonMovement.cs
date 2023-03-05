@@ -74,10 +74,10 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Check if the player is currently stealing
         bool isStealing = false;
-        PickUp pickUpScript = FindObjectOfType<PickUp>();
-        if (pickUpScript != null)
+        PickUp PickUpScript = FindObjectOfType<PickUp>();
+        if (PickUpScript != null)
         {
-            isStealing = pickUpScript.IsStealing;
+            isStealing = PickUpScript.IsStealing;
         }
 
         // If the player is stealing, freeze movement

@@ -29,6 +29,8 @@ public class PickUp : MonoBehaviour
         {
             isStealing = true;
             timeLeft = stealTime;
+            
+        
         }
 
         // Check if the player has stopped holding down the "E" key
@@ -50,7 +52,13 @@ public class PickUp : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
     }
+
+    /*public void NotifyItemPickedUp()
+    {
+        IsStealing.Invoke();
+    }*/
 
     private void OnGUI()
     {
