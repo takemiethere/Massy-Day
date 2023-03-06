@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyMouse : MonoBehaviour
+public class MouseEnemy : MonoBehaviour
 {
 
     public Transform startZone; // the starting zone of the enemy
