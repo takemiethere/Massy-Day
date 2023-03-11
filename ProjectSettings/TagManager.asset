@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TargetZone
+  - CleanObject
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ItemInteract
+  - pickableLayer
   - Water
   - UI
   - Player

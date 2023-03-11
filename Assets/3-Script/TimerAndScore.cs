@@ -4,22 +4,29 @@ using TMPro;
 
 public class TimerAndScore : MonoBehaviour
 {
-    public float timeLeft = 60.0f;
+    public float timeLeft = 3.0f;
     public TextMeshProUGUI timerText;
     /*public int score = 0;
     public TextMeshProUGUI scoreText;*/
     private bool timeUp = false;
+    public Image timerBarImage;
+
 
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        timerText.text = "Time: " + (int)timeLeft;
+        int minutes = Mathf.FloorToInt(timeLeft / 60.0f);
+        int seconds = Mathf.FloorToInt(timeLeft % 60.0f);
+        timerText.text = "Time: " + string.Format("{0:0}:{1:00}", minutes, seconds);
+        timerBarImage.fillAmount = timeLeft / 60.0f; // Set the fill amount based on the remaining time
 
         if (timeLeft < 0)
         {
             timeUp = true;
             TimeUp();
         }
+
+
         if (!timeUp)
         {
             if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
