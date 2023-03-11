@@ -18,7 +18,7 @@ public class TimerAndScore : MonoBehaviour
         int minutes = Mathf.FloorToInt(timeLeft / 60.0f);
         int seconds = Mathf.FloorToInt(timeLeft % 60.0f);
         timerText.text = "Time: " + string.Format("{0:0}:{1:00}", minutes, seconds);
-        timerBarImage.fillAmount = timeLeft / 60.0f; // Set the fill amount based on the remaining time
+        timerBarImage.fillAmount = timeLeft / 180.0f; // Set the fill amount based on the remaining time
 
         if (timeLeft < 0)
         {
