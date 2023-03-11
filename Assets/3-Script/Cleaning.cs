@@ -103,10 +103,10 @@ public class Cleaning : MonoBehaviour
         }
 
         // Draw the target zone
-        Vector3 targetZoneScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        /*Vector3 targetZoneScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
         float targetZoneSize = maxCleanDistance * 2 * Screen.height / Camera.main.fieldOfView;
         Rect targetZoneRect = new Rect(targetZoneScreenPosition.x - targetZoneSize / 2, Screen.height - targetZoneScreenPosition.y - targetZoneSize / 2, targetZoneSize, targetZoneSize);
-        GUI.Box(targetZoneRect, "Target Zone");
+        GUI.Box(targetZoneRect, "Target Zone");*/
     }
 
 }
