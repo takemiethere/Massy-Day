@@ -24,6 +24,6 @@ public class RatDestroyUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        text.text = "Rats destroyed: " + ratsDestroyed + " / " + ratsToDestroy;
+        text.text = "Kill " + ratsDestroyed + " / " + ratsToDestroy + " Rats.";
     }
 }

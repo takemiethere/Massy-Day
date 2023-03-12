@@ -14,7 +14,7 @@ public class CleaningSimulator : MonoBehaviour
     public Transform dirtyObjectsParent;
     public Transform cleanObjectsParent;
     public Transform binTransform;
-    public Text cleaningProgressText;
+    public TextMeshProUGUI cleaningProgressText;
 
     private float timeLeft = 0f;
     private bool isCleaning = false;

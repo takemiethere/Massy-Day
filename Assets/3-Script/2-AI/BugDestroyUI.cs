@@ -24,6 +24,6 @@ public class BugDestroyUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        textbug.text = "Cockroach destroyed: " + bugsDestroyed + " / " + bugsToDestroy;
+        textbug.text = "Kill " + bugsDestroyed + " / " + bugsToDestroy + " Cockroacs";
     }
 }
